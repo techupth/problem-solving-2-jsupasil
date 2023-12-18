@@ -2,6 +2,21 @@
 
 const fizzBuzz = function (n) {
   //Start coding here
+  let result = [];
+  for (let i = 0; i < n; i++) {
+    if ((i + 1) % 3 === 0) {
+      if ((i + 1) % 5 === 0) {
+        result.push("FizzBuzz");
+      } else {
+        result.push("Fizz");
+      }
+    } else if ((i + 1) % 5 === 0) {
+      result.push("Buzz");
+    } else {
+      result.push(`${i + 1}`);
+    }
+  }
+  return result;
 };
 
 const result1 = fizzBuzz(3);
